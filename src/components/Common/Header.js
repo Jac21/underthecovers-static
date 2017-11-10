@@ -8,6 +8,7 @@ class CommonHeader extends Component {
         <Header as="h2" textAlign="center">
           <Header.Content>Under the Covers</Header.Content>
           <Header sub>Austin, Texas</Header>
+          <Button primary>Learn More</Button>
           <Button primary>Book Now</Button>
         </Header>
       </div>
