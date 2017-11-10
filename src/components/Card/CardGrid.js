@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
+
 import { Grid, Segment } from "semantic-ui-react";
 
 import GenreCard from "./GenreCard";
@@ -13,32 +15,28 @@ class CardGrid extends Component {
 
   render() {
     return (
-      <Grid doubling stackable columns={4}>
+      <Grid doubling stackable columns={this.props.categories.length}>
         <Grid.Row>
-          <Grid.Column>
-            <Segment>
-              <GenreCard imageSource={genreCardPhotoOne} title="80s" />
-            </Segment>
-          </Grid.Column>
-          <Grid.Column>
-            <Segment>
-              <GenreCard imageSource={genreCardPhotoOne} title="Rock" />
-            </Segment>
-          </Grid.Column>
-          <Grid.Column>
-            <Segment>
-              <GenreCard imageSource={genreCardPhotoOne} title="Indie" />
-            </Segment>
-          </Grid.Column>
-          <Grid.Column>
-            <Segment>
-              <GenreCard imageSource={genreCardPhotoOne} title="Pop" />
-            </Segment>
-          </Grid.Column>
+          {this.props.categories &&
+            this.props.categories.map(item => (
+              <Grid.Column>
+                <Segment>
+                  <GenreCard
+                    key={item.id}
+                    imageSource={genreCardPhotoOne}
+                    title={item.title}
+                  />
+                </Segment>
+              </Grid.Column>
+            ))}
         </Grid.Row>
       </Grid>
     );
   }
 }
+
+CardGrid.propTypes = {
+  categories: PropTypes.array
+};
 
 export default CardGrid;
