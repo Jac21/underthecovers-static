@@ -13,7 +13,7 @@ class CardGrid extends Component {
 
   render() {
     return (
-      <Grid columns="equal">
+      <Grid doubling stackable columns={4}>
         <Grid.Row>
           <Grid.Column>
             <Segment>
