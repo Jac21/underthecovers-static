@@ -8,10 +8,10 @@ class App extends Component {
     super(props);
     this.state = {
       categories: [
-        { title: "80s" },
-        { title: "Rock" },
-        { title: "Indie" },
-        { title: "Pop" }
+        { id: "1", title: "80s" },
+        { id: "2", title: "Rock" },
+        { id: "3", title: "Indie" },
+        { id: "4", title: "Pop" }
       ]
     };
   }

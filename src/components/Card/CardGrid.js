@@ -19,12 +19,11 @@ class CardGrid extends Component {
         <Grid.Row>
           {this.props.categories &&
             this.props.categories.map(item => (
-              <Grid.Column>
+              <Grid.Column key={item.id}>
                 <Segment>
                   <GenreCard
-                    key={item.id}
-                    imageSource={genreCardPhotoOne}
                     title={item.title}
+                    imageSource={genreCardPhotoOne}
                   />
                 </Segment>
               </Grid.Column>
