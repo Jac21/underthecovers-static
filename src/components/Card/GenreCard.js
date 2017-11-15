@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+
 import { Card, Image } from "semantic-ui-react";
 
 class GenreCard extends Component {

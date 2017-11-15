@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 
-import CommonHeader from "./components/Common/Header";
+import CommonHeader from "./components/Common/CommonHeader";
 import CardGrid from "./components/Card/CardGrid";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      // TODO
       categories: [
         { id: "1", title: "80s" },
         { id: "2", title: "Rock" },
@@ -19,7 +20,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <CommonHeader />
+        <CommonHeader
+          headerContentText="Under the Covers"
+          headerSubText="Austin, Texas"
+          showButtonBar={true}
+          primaryButtonText="Under the Covers"
+          secondaryButtonText="Austin, Texas"
+        />
         <CardGrid categories={this.state.categories} />
       </div>
     );
