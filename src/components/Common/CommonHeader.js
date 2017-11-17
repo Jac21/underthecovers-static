@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
-import { Header } from "semantic-ui-react";
+import { Header } from 'semantic-ui-react';
 
-import ButtonBar from "./ButtonBar";
+import ButtonBar from './ButtonBar';
 
 class CommonHeader extends Component {
   constructor(props) {

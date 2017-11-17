@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
 class SongCategoryPage extends Component {
   constructor(props) {
@@ -7,7 +7,7 @@ class SongCategoryPage extends Component {
   }
 
   render() {
-    return <div />;
+    return <div>Song Category Page</div>;
   }
 }
 

@@ -1,11 +1,12 @@
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
-import { Grid, Segment } from "semantic-ui-react";
+import { Grid, Segment } from 'semantic-ui-react';
 
-import GenreCard from "./GenreCard";
+import GenreCard from './GenreCard';
 
-import genreCardPhotoOne from "../../assets/daniel.jpg";
+import genreCardPhotoOne from '../../assets/daniel.jpg';
 
 class CardGrid extends Component {
   constructor(props) {
@@ -21,10 +22,12 @@ class CardGrid extends Component {
             this.props.categories.map(item => (
               <Grid.Column key={item.id}>
                 <Segment>
-                  <GenreCard
-                    title={item.title}
-                    imageSource={genreCardPhotoOne}
-                  />
+                  <Link to={`/category`}>
+                    <GenreCard
+                      title={item.title}
+                      imageSource={genreCardPhotoOne}
+                    />
+                  </Link>
                 </Segment>
               </Grid.Column>
             ))}
