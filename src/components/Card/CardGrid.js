@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { Grid, Segment } from 'semantic-ui-react';
 
+import CategoryApi from '../../api/CategoryApi';
 import GenreCard from './GenreCard';
 
 import genreCardPhotoOne from '../../assets/daniel.jpg';
@@ -16,21 +17,20 @@ class CardGrid extends Component {
 
   render() {
     return (
-      <Grid doubling stackable columns={this.props.categories.length}>
+      <Grid doubling stackable columns={this.props.count}>
         <Grid.Row>
-          {this.props.categories &&
-            this.props.categories.map(item => (
-              <Grid.Column key={item.id}>
-                <Segment>
-                  <Link to={`/category`}>
-                    <GenreCard
-                      title={item.title}
-                      imageSource={genreCardPhotoOne}
-                    />
-                  </Link>
-                </Segment>
-              </Grid.Column>
-            ))}
+          {CategoryApi.all().map(item => (
+            <Grid.Column key={item.id}>
+              <Segment>
+                <Link to={`/category/${item.id}`}>
+                  <GenreCard
+                    title={item.title}
+                    imageSource={genreCardPhotoOne}
+                  />
+                </Link>
+              </Segment>
+            </Grid.Column>
+          ))}
         </Grid.Row>
       </Grid>
     );
@@ -38,7 +38,7 @@ class CardGrid extends Component {
 }
 
 CardGrid.propTypes = {
-  categories: PropTypes.array
+  count: PropTypes.number
 };
 
 export default CardGrid;

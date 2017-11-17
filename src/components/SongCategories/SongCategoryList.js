@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 
+import CategoryApi from '../../api/CategoryApi';
+
 class SongCategoryList extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      Category: CategoryApi.get(props.match.params.number),
+      Propy: props
+    };
   }
 
   render() {
-    return <div />;
+    return <div>{this.state.Category.title}</div>;
   }
 }
 

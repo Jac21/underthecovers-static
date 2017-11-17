@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
+
+import Home from '../Home/Home';
+import SongCategoryList from './SongCategoryList';
 
 class SongCategoryPage extends Component {
   constructor(props) {
@@ -7,7 +11,12 @@ class SongCategoryPage extends Component {
   }
 
   render() {
-    return <div>Song Category Page</div>;
+    return (
+      <Switch>
+        <Route exact path="/category" component={Home} />
+        <Route path="/category/:number" component={SongCategoryList} />
+      </Switch>
+    );
   }
 }
 
