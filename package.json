@@ -4,10 +4,10 @@
   "private": true,
   "homepage": "https://jac21.github.io/underthecovers-static",
   "dependencies": {
-    "gh-pages": "^1.0.0",
+    "gh-pages": "^1.1.0",
     "glamor": "^2.20.40",
-    "react": "^16.0.0",
-    "react-dom": "^16.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.17",
     "scroll-to-element": "^2.0.0",
@@ -18,8 +18,7 @@
     "start": "react-scripts start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "build":
-      "react-scripts build && sw-precache --config=sw-precache-config.js",
+    "build": "react-scripts build && sw-precache --config=sw-precache-config.js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
