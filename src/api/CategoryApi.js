@@ -2,10 +2,14 @@
 
 const CategoryApi = {
   categories: [
-    { id: '1', title: '80s' },
-    { id: '2', title: 'Rock' },
-    { id: '3', title: 'Indie' },
-    { id: '4', title: 'Pop' }
+    { id: '1', title: 'Oldies' },
+    { id: '2', title: 'Eighties Classics' },
+    { id: '3', title: 'Nineties Alternative' },
+    { id: '4', title: 'Slow Dance' },
+    { id: '5', title: 'Modern Alternative' },
+    { id: '6', title: 'Latin Rock' },
+    { id: '7', title: 'Sing-along' },
+    { id: '8', title: 'Tropical' }
   ],
   all: function() {
     return this.categories;

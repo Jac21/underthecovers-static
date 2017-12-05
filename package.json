@@ -23,7 +23,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
-    "prettier-eslint": "^8.2.2",
+    "prettier-eslint": "^8.2.3",
     "sw-precache": "^5.2.0"
   }
 }
