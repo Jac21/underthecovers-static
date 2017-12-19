@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import { Grid, Segment } from 'semantic-ui-react';
 
-import CategoryApi from '../../api/CategoryApi';
+import TracksApi from '../../api/TracksApi';
 import GenreCard from './GenreCard';
 
 import genreCardPhotoOne from '../../assets/daniel.jpg';
@@ -19,10 +19,10 @@ class CardGrid extends Component {
     return (
       <Grid doubling stackable columns={this.props.count}>
         <Grid.Row>
-          {CategoryApi.all().map(item => (
+          {TracksApi.getDistinctCategories().map(item => (
             <Grid.Column key={item.id}>
               <Segment>
-                <Link to={`/category/${item.id}`}>
+                <Link to={`/category/${item.title}`}>
                   <GenreCard
                     title={item.title}
                     imageSource={genreCardPhotoOne}

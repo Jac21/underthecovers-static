@@ -14,7 +14,7 @@ class SongCategoryPage extends Component {
     return (
       <Switch>
         <Route exact path="/category" component={Home} />
-        <Route path="/category/:number" component={SongCategoryList} />
+        <Route path="/category/:string" component={SongCategoryList} />
       </Switch>
     );
   }
