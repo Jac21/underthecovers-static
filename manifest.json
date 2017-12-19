@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Book The Covers",
+  "name": "Site for Under the Covers",
   "icons": [
     {
       "src": "favicon.ico",
