@@ -299,15 +299,12 @@ const TracksApi = {
     return this.tracks.find(isCategory);
   },
   getTracksForCategory: function(category) {
-    var newTracks = [];
-
-    this.tracks.forEach(function(track) {
-      if (track.setListTheme.split(',')[0] === category) {
-        newTracks.push(track.song);
-      }
+    return this.tracks.filter(function(track) {
+      return (
+        track.setListTheme.split(',')[0] === category &&
+        track.classInternal !== 'C'
+      );
     });
-
-    return newTracks;
   },
   getDistinctCategories: function() {
     var lookup = {};

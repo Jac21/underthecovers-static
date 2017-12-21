@@ -17,10 +17,10 @@ class SongCategoryList extends Component {
     return (
       <div>
         <header>{this.props.match.params.string}</header>
-        {this.state.Category.map(song => (
+        {this.state.Category.map(track => (
           <SongListItem
-            key={song}
-            title={song}
+            key={track.song}
+            title={track.song}
             imageSource={genreCardPhotoOne}
           />
         ))}
