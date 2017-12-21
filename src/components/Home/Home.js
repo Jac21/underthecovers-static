@@ -12,13 +12,15 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <CommonHeader
-          headerContentText="Under the Covers"
-          headerSubText="Austin, Texas"
-          showButtonBar={true}
-          primaryButtonText="Book Now"
-          secondaryButtonText="Learn More"
-        />
+        <div>
+          <CommonHeader
+            headerContentText="Under the Covers"
+            headerSubText="Austin, Texas"
+            showButtonBar={true}
+            primaryButtonText="Book Now"
+            secondaryButtonText="Learn More"
+          />
+        </div>
         <CardGrid count={4} />
       </div>
     );

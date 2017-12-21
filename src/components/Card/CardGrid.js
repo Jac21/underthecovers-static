@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-import { Grid, Segment } from 'semantic-ui-react';
+import { Grid } from 'semantic-ui-react';
 
 import TracksApi from '../../api/TracksApi';
 import GenreCard from './GenreCard';
 
-import genreCardPhotoOne from '../../assets/daniel.jpg';
+import genreCardPhotoOne from '../../assets/images/daniel.jpg';
 
 class CardGrid extends Component {
   constructor(props) {
@@ -21,14 +21,9 @@ class CardGrid extends Component {
         <Grid.Row>
           {TracksApi.getDistinctCategories().map(item => (
             <Grid.Column key={item.id}>
-              <Segment>
-                <Link to={`/category/${item.title}`}>
-                  <GenreCard
-                    title={item.title}
-                    imageSource={genreCardPhotoOne}
-                  />
-                </Link>
-              </Segment>
+              <Link to={`/category/${item.title}`}>
+                <GenreCard title={item.title} imageSource={genreCardPhotoOne} />
+              </Link>
             </Grid.Column>
           ))}
         </Grid.Row>

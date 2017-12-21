@@ -294,11 +294,22 @@ const TracksApi = {
   all: function() {
     return this.tracks;
   },
-  get: function(setListTheme) {
-    const isCategory = p => p.setListTheme.split(',')[0] === setListTheme;
+  get: function(category) {
+    const isCategory = p => p.setListTheme.split(',')[0] === category;
     return this.tracks.find(isCategory);
   },
-  getDistinctCategories() {
+  getTracksForCategory: function(category) {
+    var newTracks = [];
+
+    this.tracks.forEach(function(track) {
+      if (track.setListTheme.split(',')[0] === category) {
+        newTracks.push(track.song);
+      }
+    });
+
+    return newTracks;
+  },
+  getDistinctCategories: function() {
     var lookup = {};
     var result = [];
 

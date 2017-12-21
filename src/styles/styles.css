@@ -1,0 +1,9 @@
+.landing-header {
+  background-color: #263d36;
+  background-image: url('../assets/images/Common/namroud-gorguis-253765.jpg');
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 9vw 2em;
+  text-align: center;
+}

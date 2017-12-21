@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { Card, Image } from 'semantic-ui-react';
+import { Card, Button, Image } from 'semantic-ui-react';
 
 class GenreCard extends Component {
   constructor(props) {
@@ -17,6 +17,12 @@ class GenreCard extends Component {
           <Card.Content>
             <Card.Header>{this.props.title}</Card.Header>
           </Card.Content>
+          <div className="ui two buttons">
+            <Button basic color="blue">
+              See Song List
+            </Button>
+          </div>
+          <Card.Content extra />
         </Card>
       </div>
     );
