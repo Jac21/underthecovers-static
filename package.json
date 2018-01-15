@@ -2,7 +2,7 @@
   "name": "underthecovers-static",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://bookthecovers.com",
+  "homepage": "https://www.bookthecovers.com",
   "dependencies": {
     "gh-pages": "^1.1.0",
     "glamor": "^2.20.40",
