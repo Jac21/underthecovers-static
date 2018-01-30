@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import { Switch, Route } from 'react-router-dom';
 
 import Home from '../Home/Home';
@@ -17,9 +19,14 @@ class Main extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/category" component={SongCategoryPage} />
         </Switch>
+        {this.props.loading && <p>Loading</p>}
       </main>
     );
   }
 }
+
+Main.propTypes = {
+  loading: PropTypes.bool.isRequired
+};
 
 export default Main;

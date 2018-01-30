@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
+import { connect } from 'react-redux';
 
 import Main from './components/Main/Main';
 
@@ -11,10 +14,20 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Main />
+        <Main loading={this.props.loading} />
       </div>
     );
   }
 }
 
-export default App;
+App.propTypes = {
+  loading: PropTypes.bool.isRequired
+};
+
+function mapStateToProps(state, ownProps) {
+  return {
+    loading: state.ajaxCallsInProgress > 0
+  };
+}
+
+export default connect(mapStateToProps)(App);

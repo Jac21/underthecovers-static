@@ -325,7 +325,9 @@ const TracksApi = {
       }
     }
 
-    return result;
+    return new Promise((resolve, reject) => {
+      resolve(Object.assign([], result));
+    });
   }
 };
 
