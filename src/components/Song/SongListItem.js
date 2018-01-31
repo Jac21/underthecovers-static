@@ -17,7 +17,9 @@ class SongListItem extends Component {
             <Button primary>Add to Cart</Button>
           </List.Content>
           <Image avatar src={this.props.imageSource} />
-          <List.Content>{this.props.title}</List.Content>
+          <List.Content>
+            {this.props.artist} - {this.props.title}
+          </List.Content>
         </List.Item>
       </List>
     );
@@ -25,6 +27,7 @@ class SongListItem extends Component {
 }
 
 SongListItem.propTypes = {
+  artist: PropTypes.string,
   title: PropTypes.string,
   imageSource: PropTypes.string
 };

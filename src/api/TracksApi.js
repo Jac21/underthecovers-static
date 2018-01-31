@@ -328,6 +328,27 @@ const TracksApi = {
     return new Promise((resolve, reject) => {
       resolve(Object.assign([], result));
     });
+  },
+  getDistinctCategoriesOld: function() {
+    var lookup = {};
+    var result = [];
+
+    var items = this.tracks;
+
+    // eslint-disable-next-line
+    for (var item, i = 0; (item = items[i++]); ) {
+      var name = item.setListTheme.split(',')[0];
+
+      if (!(name in lookup)) {
+        lookup[name] = 1;
+        result.push({
+          id: i,
+          title: name
+        });
+      }
+    }
+
+    return result;
   }
 };
 

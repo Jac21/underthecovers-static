@@ -7,7 +7,7 @@ export default function categoryReducer(
 ) {
   switch (action.type) {
     case types.LOAD_CATEGORIES_SUCCESS:
-      console.log(action.categories);
+      console.log('LOAD_CATEGORIES_SUCCESS: ', action);
       return action.categories;
     default:
       return state;

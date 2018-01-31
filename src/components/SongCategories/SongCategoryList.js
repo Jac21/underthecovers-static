@@ -20,6 +20,7 @@ class SongCategoryList extends Component {
         {this.state.Category.map(track => (
           <SongListItem
             key={track.song}
+            artist={track.artist}
             title={track.song}
             imageSource={genreCardPhotoOne}
           />

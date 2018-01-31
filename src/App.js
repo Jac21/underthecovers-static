@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 
 import Main from './components/Main/Main';
 
@@ -26,8 +26,8 @@ App.propTypes = {
 
 function mapStateToProps(state, ownProps) {
   return {
-    loading: state.ajaxCallsInProgress > 0
+    loading: false //state.ajaxCallsInProgress > 0
   };
 }
 
-export default connect(mapStateToProps)(App);
+export default /*connect(mapStateToProps)*/ App;

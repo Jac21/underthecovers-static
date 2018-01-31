@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import configureStore from './store/configureStore';
-import { loadCategories } from './actions/categoriesActions';
+// import { Provider } from 'react-redux';
+// import configureStore from './store/configureStore';
+// import { loadCategories } from './actions/categoriesActions';
 
 import { HashRouter } from 'react-router-dom';
 
@@ -13,12 +14,12 @@ import registerServiceWorker from './registerServiceWorker';
 
 import App from './App';
 
-const store = configureStore();
-store.dispatch(loadCategories());
+// const store = configureStore();
+// store.dispatch(loadCategories());
 
 ReactDOM.render(
   <HashRouter>
-    <App store={store} />
+    <App loading={false} />
   </HashRouter>,
   document.getElementById('root')
 );
