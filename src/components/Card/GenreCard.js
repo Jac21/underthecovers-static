@@ -16,7 +16,7 @@ class GenreCard extends Component {
       <div className="utc-card">
         <Link to={this.props.pageLink}>
           <Card fluid>
-            <Image src={this.props.imageSource} />
+            <Image src={this.props.imageSource} alt={this.props.title} />
             <Card.Content>
               <Card.Header>{this.props.title}</Card.Header>
             </Card.Content>
