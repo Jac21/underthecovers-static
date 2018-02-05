@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import { Link } from 'react-router-dom';
-
 import { Grid } from 'semantic-ui-react';
 
 import TracksApi from '../../api/TracksApi';
@@ -20,17 +18,22 @@ class CardGrid extends Component {
 
   render() {
     return (
-      <Grid doubling stackable columns={this.props.count}>
-        <Grid.Row>
-          {TracksApi.getDistinctCategoriesOld().map(item => (
-            <Grid.Column key={item.id}>
-              <Link to={`/category/${item.title}`}>
-                <GenreCard title={item.title} imageSource={genreCardPhotoOne} />
-              </Link>
-            </Grid.Column>
-          ))}
-        </Grid.Row>
-      </Grid>
+      <div className="card-grid-wrapper">
+        <h2 className="card-grid-header">Songs</h2>
+        <Grid divided doubling stackable columns={this.props.count}>
+          <Grid.Row>
+            {TracksApi.getDistinctCategoriesOld().map(item => (
+              <Grid.Column key={item.id}>
+                <GenreCard
+                  title={item.title}
+                  pageLink={`/category/${item.title}`}
+                  imageSource={genreCardPhotoOne}
+                />
+              </Grid.Column>
+            ))}
+          </Grid.Row>
+        </Grid>
+      </div>
     );
   }
 }

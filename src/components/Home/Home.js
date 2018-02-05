@@ -14,14 +14,15 @@ class Home extends Component {
       <div>
         <div>
           <CommonHeader
+            showMenuBar={true}
             headerContentText="Under the Covers"
-            headerSubText="Austin, Texas"
+            headerSubText=" Cover band based in Austin, Texas"
             showButtonBar={true}
             primaryButtonText="Book Now"
             secondaryButtonText="Learn More"
           />
         </div>
-        <CardGrid count={4} />
+        <CardGrid count={2} className="card-grid-wrapper" />
       </div>
     );
   }
