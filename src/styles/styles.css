@@ -1,13 +1,3 @@
-.landing-header {
-  background-color: #263d36;
-  background-image: url('../assets/images/Common/matt-botsford-197870-cover.jpg');
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 9vw 2em;
-  text-align: center;
-}
-
 /* Basic style for some HTML elements */
 
 body {
@@ -296,6 +286,9 @@ nav.ui.menu.ui.container > .right.menu > a.item:last-child {
   background-repeat: no-repeat !important;
   background-size: cover !important;
   margin-bottom: 1rem !important;
+  /* https://www.viget.com/articles/angled-edges-with-css-masks-and-transforms/ */
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%) !important;
+  clip-path: polygon(0 0, 100% 0, 100% 96%, 0 100%) !important;
 }
 
 .card-grid-header {
