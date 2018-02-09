@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import MenuBar from './MenuBar';
 import ButtonBar from './ButtonBar';
-import Link from 'react-router-dom/Link';
 
 class CommonHeader extends Component {
   constructor(props) {
@@ -14,17 +14,7 @@ class CommonHeader extends Component {
     return (
       <div className="ui inverted vertical masthead center aligned segment">
         {this.props.showMenuBar ? (
-          <div className="ui container">
-            <div className="ui large secondary inverted pointing menu border-none-mixin">
-              <Link to="/" className="active item">
-                Home
-              </Link>
-              <div className="right item">
-                <a className="ui inverted button">Watch</a>
-                <a className="ui inverted button">Listen</a>
-              </div>
-            </div>
-          </div>
+          <MenuBar firstButtonText="Watch" secondButtonText="Extras" />
         ) : null}
         <div className="ui text container">
           <h1 className="ui inverted header">{this.props.headerContentText}</h1>
