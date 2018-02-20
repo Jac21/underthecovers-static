@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import { css } from 'glamor';
+
 import { Grid } from 'semantic-ui-react';
 
 import TracksApi from '../../api/TracksApi';
 import GenreCard from './GenreCard';
 
 import genreCardPhotoOne from '../../assets/images/daniel.jpg';
+
+const cardGridHeader = css({
+  textAlign: 'center'
+});
 
 class CardGrid extends Component {
   constructor(props) {
@@ -18,7 +24,7 @@ class CardGrid extends Component {
 
   render() {
     return (
-      <div className="card-grid-wrapper">
+      <div {...cardGridHeader}>
         <h2 className="card-grid-header">Songs</h2>
         <Grid divided doubling stackable columns={this.props.count}>
           <Grid.Row>
