@@ -24,10 +24,10 @@ App.propTypes = {
   loading: PropTypes.bool.isRequired
 };
 
-function mapStateToProps(state, ownProps) {
-  return {
-    loading: false //state.ajaxCallsInProgress > 0
-  };
-}
+// function mapStateToProps(state, ownProps) {
+//   return {
+//     loading: false //state.ajaxCallsInProgress > 0
+//   };
+// }
 
 export default /*connect(mapStateToProps)*/ App;
