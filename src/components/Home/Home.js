@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import CommonHeader from '../Common/CommonHeader';
 import CardGrid from '../Card/CardGrid';
+import SetAccordion from '../Accordion/SetAccordion';
 
 class Home extends Component {
   constructor(props) {
@@ -22,6 +23,7 @@ class Home extends Component {
             secondaryButtonText="Learn More"
           />
         </div>
+        <SetAccordion />
         <CardGrid count={2} className="card-grid-wrapper" />
       </div>
     );
