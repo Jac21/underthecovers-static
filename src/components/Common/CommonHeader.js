@@ -14,7 +14,10 @@ class CommonHeader extends Component {
     return (
       <div className="ui inverted vertical masthead center aligned segment">
         {this.props.showMenuBar ? (
-          <MenuBar firstButtonText="Watch" secondButtonText="Extras" />
+          <MenuBar firstButtonText="Extras" 
+            firstButtonPath="/information" 
+            secondButtonText="Cart"
+            secondButtonPath="/cart" />
         ) : null}
         <div className="ui text container">
           <h1 className="ui inverted header">{this.props.headerContentText}</h1>

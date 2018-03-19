@@ -5,6 +5,8 @@ import { Switch, Route } from 'react-router-dom';
 
 import Home from '../Home/Home';
 import SongCategoryPage from '../SongCategories/SongCategoryPage';
+import InformationPage from '../Information/InformationPage';
+import CartPage from '../Cart/CartPage';
 
 class Main extends Component {
   constructor(props) {
@@ -18,6 +20,8 @@ class Main extends Component {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/category" component={SongCategoryPage} />
+          <Route path="/information" component={InformationPage} />
+          <Route path="/cart" component={CartPage} />
         </Switch>
         {this.props.loading && <p>Loading</p>}
       </main>

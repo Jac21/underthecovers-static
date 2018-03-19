@@ -17,8 +17,12 @@ class MenuBar extends Component {
             Home
           </Link>
           <div className="right item">
-            <a className="ui inverted button">{this.props.firstButtonText}</a>
-            <a className="ui inverted button">{this.props.secondButtonText}</a>
+            <Link to={this.props.firstButtonPath} className="ui inverted button">
+              {this.props.firstButtonText}
+            </Link>
+            <Link to={this.props.secondButtonPath} className="ui inverted button">
+              {this.props.secondButtonText}
+            </Link>
           </div>
         </div>
       </div>
@@ -28,7 +32,9 @@ class MenuBar extends Component {
 
 MenuBar.propTypes = {
   firstButtonText: PropTypes.string,
-  secondButtonText: PropTypes.string
+  firstButtonPath: PropTypes.string,
+  secondButtonText: PropTypes.string,
+  secondButtonPath: PropTypes.string
 };
 
 export default MenuBar;
