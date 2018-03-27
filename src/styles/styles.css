@@ -1,5 +1,7 @@
 /* Basic style for some HTML elements */
 
+@import '~semantic-ui-css/semantic.min.css';
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
