@@ -17,10 +17,16 @@ class MenuBar extends Component {
             Home
           </Link>
           <div className="right item">
-            <Link to={this.props.firstButtonPath} className="ui inverted button">
+            <Link
+              to={this.props.firstButtonPath}
+              className="ui inverted button"
+            >
               {this.props.firstButtonText}
             </Link>
-            <Link to={this.props.secondButtonPath} className="ui inverted button">
+            <Link
+              to={this.props.secondButtonPath}
+              className="ui inverted button"
+            >
               {this.props.secondButtonText}
             </Link>
           </div>

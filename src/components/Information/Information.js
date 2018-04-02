@@ -8,15 +8,10 @@ class Information extends Component {
   }
 
   render() {
-    return (
-      <div>
-      Information
-      </div>
-    );
+    return <div>Information</div>;
   }
 }
 
-Information.propTypes = {
-};
+Information.propTypes = {};
 
 export default Information;
