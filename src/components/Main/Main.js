@@ -18,7 +18,11 @@ class Main extends Component {
     return (
       <main>
         <Switch>
-          <Route exact path="/" component={Home} />
+          <Route
+            exact
+            path="/"
+            render={props => <Home {...props} comingSoonMode={true} />}
+          />
           <Route path="/category" component={SongCategoryPage} />
           <Route path="/information" component={InformationPage} />
           <Route path="/cart" component={CartPage} />
