@@ -1,7 +1,16 @@
 /* Basic style for some HTML elements */
 
-@import '~semantic-ui-css/semantic.min.css';
+/*
+Palette: https://color.adobe.com/076-vector-retro-cupcake-poster-design-template-color-theme-6345831/?showPublished=true
 
+#57D1AB
+#F5DFCC
+#F46747
+#F28774
+#EE4036
+*/
+
+@import '~semantic-ui-css/semantic.min.css';
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
