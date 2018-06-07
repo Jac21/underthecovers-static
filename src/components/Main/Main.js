@@ -21,7 +21,7 @@ class Main extends Component {
           <Route
             exact
             path="/"
-            render={props => <Home {...props} comingSoonMode={true} />}
+            render={props => <Home {...props} comingSoonMode={false} />}
           />
           <Route path="/category" component={SongCategoryPage} />
           <Route path="/information" component={InformationPage} />

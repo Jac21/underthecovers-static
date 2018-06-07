@@ -8,7 +8,7 @@ import { css } from 'glamor';
 const setAccordion = css({
   maxWidth: '50%',
   margin: 'auto',
-  display: 'none' // temp property
+  // display: 'none' // temp property
 });
 
 class SetAccordion extends Component {
